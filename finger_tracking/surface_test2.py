@@ -124,6 +124,8 @@ def main():
         if not ret:
             break
 
+        now = time.time()
+
         h, w, _ = frame.shape
         rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         results = hands.process(rgb)
@@ -176,6 +178,7 @@ def main():
                 note = KEY_MAP.get(str(z))
                 if note:
                     play_note(note)
+
         for z in list(active_zones):
             if z not in current_pressed:
                 active_zones.remove(z)
