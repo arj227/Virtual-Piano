@@ -6,9 +6,9 @@ hands = mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.8
 mp_drawing = mp.solutions.drawing_utils
 
 # Threshold to determine if a fingertip is low enough (pressing)
-Y_PRESS_THRESHOLD = 0.76  # Normalized (0 = top, 1 = bottom of image)
+Y_PRESS_THRESHOLD = 0.43  # Normalized (0 = top, 1 = bottom of image)
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("Piano1_2.mp4")
 
 tip_ids = {
     4: "Thumb",
